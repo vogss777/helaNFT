@@ -5,13 +5,13 @@
 		<transition :enter-active-class="'animated fadeIn'" :leave-active-class="'animated fadeOut'" mode="out-in">
 			<router-view calss="inner_content"></router-view>
 		</transition>
-		<!-- <footerBottom></footerBottom> -->
+		<footerBottom></footerBottom>
 	</div>
 </template>
 
 <script>
 import headerTop from '@/components/common/headerTop/index.vue';
-// import footerBottom from '@/components/common/footerBottom/index.vue';
+import footerBottom from '@/components/common/footerBottom/index.vue';
 import token from '@/config/index.js';
 import inviteCode from '@/utils/inviteCode';
 import bus from '@/utils/bus.js';
@@ -19,7 +19,7 @@ export default {
 	name: '',
 	components: {
 		headerTop,
-		// footerBottom,
+		footerBottom,
 	},
 	data() {
 		return {

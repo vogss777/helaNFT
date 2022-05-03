@@ -1,13 +1,22 @@
 <template>
 	<div class="footer_bottom">
 		<div class="footer">
-			<!-- <span>Gmail: eaglegamedao@gmail.com</span> -->
-			<div class="foot_relate">
-				<div class="relate_box clearfix">
-					<!-- <a :href="item.url" :target="item.target" v-for="(item, index) in relateList" :key="index">
-						<img :src="item.img" alt="" />
-					</a> -->
-				</div>
+			<div class="relate_icon">
+				<a
+					:href="item.url"
+					:target="item.target"
+					v-for="(item, index) in relateIcon"
+					:class="{ on: relateIndex === index }"
+					@mouseleave="relateIndex = -1"
+					@mouseenter="relateIndex = index"
+					:key="index"
+				>
+					<img :src="item.img" class="one" alt="" />
+					<img :src="item.act_img" class="two" alt="" />
+				</a>
+			</div>
+			<div class="copy_right">
+				<span>版权所有 2022 HLDAO</span>
 			</div>
 		</div>
 	</div>
@@ -17,19 +26,39 @@
 export default {
 	name: 'footerBottom',
 	data() {
-		return {};
+		return {
+			relateIndex: -1,
+		};
 	},
 	computed: {
-		/**
-		 * 获取当前屏幕尺寸大小
-		 * return Object
-		 * Object.type     // 对应xs, ms, md, lg, xl
-		 * Object.index    // 对应0-xs, 1-ms, 2-md, 3-lg, 4-xl
-		 * Object.clientWidth    // 宽度
-		 */
-		// screenData() {
-		// 	return this.$store.state.screen;
-		// },
+		relateIcon() {
+			return [
+				{
+					img: require('@/assets/images/email.png'),
+					act_img: require('@/assets/images/email_a.png'),
+					target: '_blank',
+					url: 'javascript:;',
+				},
+				{
+					img: require('@/assets/images/telegram.png'),
+					act_img: require('@/assets/images/telegram_a.png'),
+					target: '_blank',
+					url: 'javascript:;',
+				},
+				{
+					img: require('@/assets/images/twitter.png'),
+					act_img: require('@/assets/images/twitter_a.png'),
+					target: '_blank',
+					url: 'javascript:;',
+				},
+				{
+					img: require('@/assets/images/discrod.png'),
+					act_img: require('@/assets/images/discrod_a.png'),
+					target: '_blank',
+					url: 'javascript:;',
+				},
+			];
+		},
 	},
 };
 </script>

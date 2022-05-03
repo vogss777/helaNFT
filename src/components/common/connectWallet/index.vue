@@ -15,7 +15,7 @@ export default {
 	name: '',
 	data() {
 		return {
-			accountText: 'connect wallet', // 钱包连接
+			accountText: 'Connect Wallet', // 钱包连接
 		};
 	},
 	computed: {
