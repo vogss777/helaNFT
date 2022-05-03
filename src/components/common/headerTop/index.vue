@@ -20,10 +20,10 @@
 			<div class="navs_list_wrap" v-show="firstShow">
 				<div class="navs_list">
 					<div class="navs">
-						<div class="tit">Home</div>
+						<router-link to="/" @click.native="firstShow = false" class="tit">Home</router-link>
 					</div>
 					<div class="navs">
-						<div class="tit">Mint</div>
+						<router-link to="/mint" @click.native="firstShow = false" class="tit">Mint</router-link>
 					</div>
 				</div>
 			</div>

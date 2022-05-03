@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div class="container" :class="currentName">
 		<p style="display: none" v-if="!initAccountMethod"></p>
 		<headerTop></headerTop>
 		<transition :enter-active-class="'animated fadeIn'" :leave-active-class="'animated fadeOut'" mode="out-in">
@@ -24,6 +24,7 @@ export default {
 	data() {
 		return {
 			fristFlag: true,
+			currentName: '',
 		};
 	},
 	watch: {
@@ -32,6 +33,16 @@ export default {
 		 */
 		'$store.state.instance.firstConnectWallet'(newVal, oldVal) {
 			console.log('监听第一次登录帐号', newVal);
+		},
+		$route: {
+			// $route可以用引号，也可以不用引号
+			handler(to, from) {
+				console.log('路由变化了');
+				console.log(to);
+				this.currentName = to.name;
+			},
+			deep: true, // 深度监听
+			immediate: true, // 第一次初始化渲染就可以监听到
 		},
 	},
 	mounted() {

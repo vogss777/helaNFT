@@ -13,7 +13,7 @@ let setRem = () => {
 			var initSize = (clientWidth / 750) * 200;
 			// var initSize = (clientWidth * 2) / 10;
 			if (clientWidth >= 768) {
-				initSize = 160;
+				initSize = 204.533;
 			} else if (clientWidth < 320) {
 				initSize = 85;
 			}

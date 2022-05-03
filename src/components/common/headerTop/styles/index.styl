@@ -26,6 +26,7 @@
       position: relative;
       z-index: 2;
       height: 0.3rem;
+      padding-right: 0.1rem;
 
       .nav_wrap {
         padding: 0 0.1rem;
@@ -37,16 +38,16 @@
         cursor: pointer;
 
         .span_box {
-          height: 16px;
+          height: 0.16rem;
           position: absolute;
-          width: 22px;
+          width: 0.2rem;
           left: 50%;
           margin-left: -11px;
           top: 50%;
-          margin-top: -8px;
+          margin-top: -0.08rem;
 
           span {
-            width: 22px;
+            width: 0.2rem;
             position: absolute;
             left: 0;
             height: 2px;
@@ -78,7 +79,7 @@
               background: $base-nav-activity-color;
 
               &:nth-of-type(1) {
-                transform: translate3d(0, 7px, 0) rotate(45deg);
+                transform: translate3d(0, 0.07rem, 0) rotate(45deg);
               }
 
               &:nth-of-type(2) {
@@ -86,7 +87,7 @@
               }
 
               &:nth-of-type(3) {
-                transform: translate3d(0, -7px, 0) rotate(-45deg);
+                transform: translate3d(0, -0.07rem, 0) rotate(-45deg);
               }
             }
           }
@@ -101,7 +102,6 @@
     right: 0;
     top: 0.44rem;
     margin: auto;
-    ms('font-size', 12px 14px 14px 14px 14px 14px);
 
     .navs_list {
       width: 100%;

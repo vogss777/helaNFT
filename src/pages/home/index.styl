@@ -1,3 +1,393 @@
 .inner_home {
-  width: 100%;  
+  width: 100%;
+  position: relative;
+  padding: 0 0.14rem;
+
+  .common_box {
+    margin-top: 0.4rem;
+    width: 100%;
+    position: relative;
+  }
+
+  .banner_top {
+    width: 100%;
+    position: relative;
+    padding: 0.07rem 0 0.3rem;
+
+    .ban_text {
+      position: relative;
+      height: 1.7rem;
+      display: flex;
+      align-items: center;
+
+      .common_title {
+        font-size: 0.17rem;
+        margin-bottom: 0.1rem;
+      }
+
+      .text {
+        color: #979797;
+        line-height: 0.17rem;
+        padding-bottom: 0.1rem;
+        position: relative;
+        width: 100%;
+        text-align: justify;
+        width: 1.97rem;
+        font-family: PingFangSC-Regular, PingFang SC;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0.17rem;
+          height: 0.02rem;
+          background: #DEBC5C;
+        }
+      }
+    }
+
+    .ban_img {
+      width: 1.2rem;
+      margin-right: -0.04rem;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .contract_address {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(90deg, #544820 0%, rgba(222, 188, 92, 0) 100%);
+    border-radius: 0.12rem;
+    padding: 0.15rem 0.19rem 0.16rem 0.17rem;
+    font-size: 0.14rem;
+
+    .adre {
+      font-size: 0.16rem;
+      line-height: 0.2rem;
+      width: 100%;
+      position: relative;
+      margin-bottom: 0.15rem;
+
+      .copy_t {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        font-size: 0.14rem;
+      }
+    }
+
+    .address {
+      width: 100%;
+      word-break: break-all;
+      line-height: 0.22rem;
+    }
+  }
+
+  .explain_text {
+    width: 100%;
+    position: relative;
+    padding: 0 0.35rem;
+    margin-top: 0.3rem;
+    text-align: center;
+
+    h2 {
+      font-size: 0.16rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      line-height: 0.23rem;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0.1rem;
+    }
+
+    h3 {
+      font-size: 0.11rem;
+      font-weight: 400;
+      color: #979797;
+      line-height: 0.15rem;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 0.23rem;
+    }
+
+    .exp_txt_box {
+      width: 100%;
+      position: relative;
+
+      .exp_txt {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        font-size: 0.11rem;
+        font-weight: 400;
+        color: #E9E9E9;
+        line-height: 0.15rem;
+        margin-top: 0.23rem;
+
+        img {
+          width: 1rem;
+          height: 1rem;
+          display: inline-block;
+        }
+
+        span {
+          color: $base-active-color;
+          font-size: 0.16rem;
+          line-height: 0.23rem;
+          width: 100%;
+          display: block;
+          margin-bottom: 0.08rem;
+          margin-top: 0.23rem;
+          text-align: center;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .get_nft_box {
+    margin-top: 0.35rem;
+
+    .nft_img_box {
+      padding-top: 0.06rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .nft_img {
+        width: 47.8386%;
+        margin-top: 0.15rem;
+        position: relative;
+        display: block;
+        transition();
+
+        &:hover {
+          transform: scale(1.03);
+        }
+
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .through_model {
+    .hl_token_wrap {
+      width: 100%;
+      position: relative;
+      background: #22221C;
+      font-size: 0.18rem;
+      font-weight: 500;
+      color: #F2F2F2;
+      line-height: 0.18rem;
+      border-radius: 0.1rem;
+      padding: 0.16rem 0.12rem 0.18rem;
+      margin-top: 0.13rem;
+
+      .hl_title {
+        width: 100%;
+        display: block;
+        height: 0.24rem;
+        padding-left: 0.32rem;
+        position: relative;
+        margin-bottom: 0.1rem;
+
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0.24rem;
+        }
+
+        p {
+          font-size: 0.16rem;
+          font-weight: bold;
+          color: #F2F2F2;
+          line-height: 0.2rem;
+          padding-top: 0.02rem;
+        }
+
+        span {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0 0.11rem;
+          font-size: 0.12rem;
+          font-weight: 400;
+          color: #FFFFFF;
+          position: relative;
+
+          &:before {
+            line-around();
+            border-radius: 0.3rem;
+          }
+        }
+      }
+
+      .hl_content {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .point_box {
+          width: 50%;
+          display: flex;
+          overflow: hidden;
+          line-height: 0.18rem;
+          margin-top: 0.1rem;
+
+          &.right {
+            padding-left: 0.13rem;
+
+            span {
+              width: 0.78rem;
+            }
+          }
+
+          span {
+            font-size: 0.14rem;
+            font-weight: 400;
+            color: #979797;
+            display: block;
+            width: 0.64rem;
+          }
+
+          p {
+            width: 0.72rem;
+            overflow: hidden;
+            font-size: 0.18rem;
+            font-weight: bold;
+            color: #F2F2F2;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  .developing_box {
+    .common_title {
+      margin-bottom: 0.21rem;
+    }
+
+    .developing_wrap {
+      width: 100%;
+      position: relative;
+      padding-left: 0.19rem;
+
+      .develop_process {
+        width: 100%;
+        position: relative;
+        padding-left: 0.19rem;
+        padding-bottom: 0.21rem;
+        line-height: 0.16rem;
+        font-size: 0.16rem;
+        color: #979797;
+        z-index: 2;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0.02rem;
+          left: 0.04rem;
+          width: 0.01rem;
+          height: 99%;
+          border-left: 1px dashed #DEBC5C;
+        }
+
+        .line {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0.09rem;
+          height: 100%;
+
+          em {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0.09rem;
+            height: 0.09rem;
+
+            &:before {
+              content: '';
+              width: 0.09rem;
+              height: 0.09rem;
+              position: absolute;
+              background: #DEBC5C;
+              opacity: 0.2;
+              border-radius: 50%;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate3d(-50%, -50%, 0);
+            }
+
+            &:after {
+              content: '';
+              position: absolute;
+              width: 0.06rem;
+              height: 0.06rem;
+              background: #DEBC5C;
+              opacity: 1;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate3d(-50%, -50%, 0);
+            }
+          }
+        }
+
+        span {
+          width: 100%;
+          display: block;
+          font-size: 0.16rem;
+          font-weight: bold;
+          color: #fff;
+          margin-bottom: 0.06rem;
+        }
+
+        p {
+          margin-bottom: 0.06rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .partners_box {
+    padding-bottom: 0.3rem;
+    .partners_wrap {
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .partner {
+        width: 29.3948%;
+        display: block;
+        margin-top: 0.11rem;
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
 }

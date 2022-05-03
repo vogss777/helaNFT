@@ -2,14 +2,18 @@
   font-family: 'AlibabaPuHuiTi';
   src: url('~@/assets/font/Alibaba-PuHuiTi-Heavy.ttf');
 }
+
+@font-face {
+  font-family: 'PingFangSC-Regular';
+  src: url('~@/assets/font/PingFang Regular.ttf');
+}
+
 // @font-face {
-//   font-family: 'aoboshi-one-regular';
-//   src: url('~@/assets/font/aoboshi-one-regular.ttf');
-//   font-weight: normal;
-//   font-style: normal;
+// font-family: 'aoboshi-one-regular';
+// src: url('~@/assets/font/aoboshi-one-regular.ttf');
+// font-weight: normal;
+// font-style: normal;
 // }
-
-
 html {
   width: 100%;
   color: $base-font-color;
@@ -23,7 +27,7 @@ body {
   font-size: 0.12rem;
   color: $base-font-color;
   background: #fff;
-  font-family: Microsoft YaHei, Arial, -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif !important;
+  font-family: PingFangSC-Regular, Microsoft YaHei, Arial, -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif !important;
 }
 
 #app, .container {
@@ -33,6 +37,21 @@ body {
   max-width: 768px;
   margin: 0 auto;
   background: $base-background-color;
+}
+
+.container {
+  background-repeat: repeat;
+  background-position: center top;
+
+  &.index {
+    background-image: url('~@/assets/images/home_bg.png');
+    background-size: contain;
+  }
+
+  &.mint {
+    background-image: url('~@/assets/images/mint_bg.png');
+    background-size: cover;
+  }
 }
 
 .sub_wrap {
@@ -112,9 +131,19 @@ textarea {
 }
 
 .common_title {
+  width: 100%;
+  display: block;
   font-size: 0.2rem;
   font-family: AlibabaPuHuiTi;
   color: #FFFFFF;
   font-weight: bold;
   line-height: 0.28rem;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
 }
