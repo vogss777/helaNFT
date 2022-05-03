@@ -1,30 +1,31 @@
-// @font-face {
-// font-family: 'aoboshi-one-regular';
-// src: url('~@/assets/font/aoboshi-one-regular.ttf');
-// font-weight: normal;
-// font-style: normal;
-// }
+@font-face {
+  font-family: AlibabaPuHuiTi;
+  src: url('~@/assets/font/AlibabaPuHuiTi.ttf');
+}
+
 html {
   width: 100%;
   color: $base-font-color;
-  background: $base-background-color;
+  background: #fff;
 }
 
 body {
   width: 100%;
   min-width: 320px;
   overflow-x: hidden;
-  font-size: 12px;
+  font-size: 0.12rem;
   color: $base-font-color;
-  background: $base-background-color;
+  background: #fff;
   font-family: Microsoft YaHei, Arial, -apple-system, Noto Sans, Helvetica Neue, Helvetica, Nimbus Sans L, Liberation Sans, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC, Source Han Sans SC, Source Han Sans CN, Microsoft YaHei, Wenquanyi Micro Hei, WenQuanYi Zen Hei, ST Heiti, SimHei, WenQuanYi Zen Hei Sharp, sans-serif !important;
 }
 
 #app, .container {
   width: 100%;
   position: relative;
-  margin: 0 auto;
   overflow-x: hidden;
+  max-width: 768px;
+  margin: 0 auto;
+  background: $base-background-color;
 }
 
 .sub_wrap {
@@ -101,4 +102,12 @@ textarea {
 
 &.animated.fast {
   animation-duration: 0.2s;
+}
+
+.common_title {
+  font-size: 0.2rem;
+  font-family: AlibabaPuHuiTi;
+  color: #FFFFFF;
+  font-weight: bold;
+  line-height: 0.28rem;
 }

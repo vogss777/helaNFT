@@ -5,6 +5,7 @@ import store from './store';
 import 'animate.css';
 import '@/assets/css/index.styl';
 import axios from '@/https/index.js';
+import rem from '@/https/rem.js';
 import { i18n } from '@/locale';
 import publicMethod from './utils/public';
 import { registerComponent } from '@/components/base/index'; // 注册全局组件
@@ -16,6 +17,7 @@ import webContract from './config/webContract';
 import VueSocialSharing from 'vue-social-sharing';
 import 'swiper/dist/css/swiper.css';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
+
 // 注册全局插件
 import CommonComponent from './components/CommonComponent/index';
 Vue.use(VueAwesomeSwiper /* { default options with global component } */);
@@ -29,6 +31,7 @@ Vue.use(webContract);
 registerComponent();
 Vue.component('CommonComponent', CommonComponent);
 Vue.config.productionTip = false;
+rem();
 new Vue({
 	i18n,
 	router,
