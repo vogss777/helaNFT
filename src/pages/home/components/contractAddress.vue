@@ -19,6 +19,11 @@ export default {
 		return {};
 	},
 	computed: {
+		i18nText() {
+			return {
+				common: this.$t('common'),
+			};
+		},
 		contractAddress() {
 			return token.pool;
 		},
