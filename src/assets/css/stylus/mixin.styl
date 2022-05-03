@@ -1,0 +1,88 @@
+transition(attribute = all, min = 300ms, animation = ease) {
+  transition: attribute min animation;
+}
+
+// 不换行
+no-wrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// ------ 超出省略 ------
+text-overflow() {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+line-bottom(color = $base-border-color) {
+  height: 2px;
+  transform: scaleY(0.25);
+  transform-origin: 50% 100%; // 要指定origin值, 要不然会模糊
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: color;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+line-top(color = $base-border-color) {
+  height: 2px;
+  transform: scaleY(0.25);
+  transform-origin: 50% 100%;
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: color;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+line-right(color = $base-border-color) {
+  height: 100%;
+  transform: scaleX(0.25);
+  transform-origin: 50% 100%;
+  content: '';
+  position: absolute;
+  width: 2px;
+  right: 0;
+  top: 0;
+  background: color;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+line-left(color = $base-border-color) {
+  height: 100%;
+  transform: scaleX(0.25);
+  transform-origin: 50% 100%;
+  content: '';
+  position: absolute;
+  width: 2px;
+  left: 0;
+  top: 0;
+  background: color;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+line-around(color = $base-border-color) {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid color;
+  -webkit-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
+  -webkit-transform-origin: top left;
+  box-sizing: border-box;
+}

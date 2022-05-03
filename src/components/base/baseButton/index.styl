@@ -1,0 +1,102 @@
+.base_components_button_layout {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ms('height', 36px 40px 44px 48px 52px 55px)
+  ms('padding-left', 20px 16px 20px 24px 26px 26px);
+  ms('padding-right', 20px 16px 20px 24px 26px 26px);
+  ms('font-size', 12px 14px 16px 16px 19px 19px);
+  text-align: center;
+  font-weight: 400;
+   
+  background: $base-active-color;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid $base-active-color;
+
+  &.morePadd {
+    ms('padding-left', 22px 26px 30px 34px 36px 36px);
+    ms('padding-right', 22px 26px 30px 34px 36px 36px);
+  }
+
+  &.inline {
+    width: auto;
+  }
+
+  &.inlineBlock {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  &.text_right {
+    text-align: right;
+  }
+
+  &.padd {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.notbg {
+    background: none;
+
+    a {
+      color: $base-active-color;
+    }
+  }
+
+  &.disabled {
+    background: #aaa;
+    cursor: default;
+    border: 1px solid #aaa;
+
+    a {
+      cursor: default;
+      color: #000;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.gray {
+    background: #aaa;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  a {
+    display: block;
+    color: #fff;
+    position: relative;
+
+    span {
+      ms('max-width', 110px 120px 130px 140px 156px 156px);
+      overflow: hidden;
+      position: relative;
+      display: block;
+    }
+
+    em {
+      background-color: rgb(7, 219, 7);
+      box-shadow: rgb(7 219 7) 0px 0px 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+      margin-bottom: 2px;
+      position: absolute;
+      left: -16px;
+      ms('width', 4px 4px 6px 6px 8px 8px);
+      ms('height', 4px 4px 6px 6px 8px 8px);
+      ms('left', -8px -8px -13px -13px -16px -16px);
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+    }
+  }
+}

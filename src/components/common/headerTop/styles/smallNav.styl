@@ -1,0 +1,197 @@
+
+.header_small {
+  width: 100%;
+  position: relative;
+
+  &.on {
+    .nav_wrap_box {
+      .nav_wrap {
+        .span_box {
+          span {
+            background: $base-nav-activity-color;
+
+            &:nth-of-type(1) {
+              transform: translate3d(0, 7px, 0) rotate(45deg);
+            }
+
+            &:nth-of-type(2) {
+              opacity: 0;
+            }
+
+            &:nth-of-type(3) {
+              transform: translate3d(0, -7px, 0) rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav_wrap_box {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    height: 70px;
+
+    .nav_wrap {
+      padding: 20px 30px;
+      height: 70px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      cursor: pointer;
+
+      .span_box {
+        height: 16px;
+        position: absolute;
+        width: 22px;
+        left: 50%;
+        margin-left: -11px;
+        top: 50%;
+        margin-top: -8px;
+
+        span {
+          width: 22px;
+          position: absolute;
+          left: 0;
+          height: 2px;
+          background: #fff;
+          transition();
+
+          &:first-child {
+            top: 0;
+          }
+
+          &:nth-of-type(2) {
+            top: 50%;
+            margin-top: -1px;
+          }
+
+          &:last-child {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .navs_list_wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    margin: auto;
+    ms('font-size', 12px 14px 14px 14px 14px 14px);
+
+    .navs_bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .navs_list {
+      width: 100%;
+      background: #000;
+      box-shadow: inset 0 14px 15px -15px rgba(236, 93, 71, 0.1), 0 1px 4px 0 rgba(236, 93, 71, 0.1);
+
+      .navs {
+        width: 100%;
+        position: relative;
+        border-top: 1px solid #555;
+        border-bottom: 1px solid #555;
+
+        .tit {
+          display: block;
+          width: 100%;
+          position: relative;
+          padding: 10px 0;
+          background: #000;
+          z-index: 1;
+          color: rgba(255, 255, 255, 0.8);
+          text-align: center;
+          border-bottom: 1px solid #555;
+          font-size: 16px;
+
+          &.router-link-exact-active {
+            color: $base-active-color;
+          }
+
+          &:before {
+            line-bottom();
+          }
+        }
+
+        .sub_navs {
+          width: 100%;
+          position: relative;
+          ms('padding-left', 24px 26px 28px 30px 34px 34px);
+          ms('padding-right', 24px 26px 28px 30px 34px 34px);
+
+          .sub {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+
+            &:before {
+              line-bottom();
+            }
+          }
+        }
+      }
+
+      .language_list {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+
+        .lang_box {
+          width: 100%;
+          font-size: 16px;
+          color: rgba(255, 255, 255, 0.8);
+          cursor: pointer;
+
+          .lang {
+            p {
+              display: inline;
+            }
+
+            &.show, &:hover {
+              p {
+                color: $base-active-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .buy_button {
+    padding: 10px 0;
+    border-top: 1px solid #555;
+    text-align: center;
+    ms('padding-left', 10px 12px 14px 16px 18px 20px);
+    ms('padding-right', 10px 12px 14px 16px 18px 20px);
+
+    .buy_btn {
+      color: #F8D690;
+      ms('padding-top', 4px 4px 5px 5px 6px 6px);
+      ms('padding-bottom', 4px 4px 5px 5px 6px 6px);
+      ms('width', 93px 93px 93px 103px 113px 113px);
+      text-align: center;
+      border-radius: 8px;
+      border: 1px solid #F8D690;
+      display: inline-block;
+
+      &:first-child {
+        ms('margin-right', 10px 12px 14px 16px 18px 20px);
+      }
+    }
+  }
+}
