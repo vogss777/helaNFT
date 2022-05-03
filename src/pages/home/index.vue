@@ -20,11 +20,12 @@
 		<div class="contract_address">
 			<div class="adre">
 				<h3>合约地址</h3>
-				<div class="copy_t">
+				<div class="copy_t" @click="copyAddress">
+					<img src="@/assets/images/copy.png" alt="" />
 					<span>复制</span>
 				</div>
 			</div>
-			<span class="address">0xD635a92140893Cc06Eb92f83f8DD852a25272526</span>
+			<span class="address">{{ contractAddress }}</span>
 		</div>
 
 		<div class="explain_text">
@@ -87,12 +88,21 @@
 </template>
 
 <script>
+import token from '@/config/index.js';
 export default {
 	name: '',
 	data() {
 		return {};
 	},
 	computed: {
+		contractAddress() {
+			return token.pool;
+		},
+		i18nText() {
+			return {
+				common: this.$t('common'),
+			};
+		},
 		explainText() {
 			return [
 				{
@@ -244,6 +254,20 @@ export default {
 			];
 		},
 	},
-	methods: {},
+	methods: {
+		copyAddress() {
+			this.$copyText(this.contractAddress)
+				.then((result) => {
+					this.$toast(this.i18nText.common.copySuccess, {
+						timeout: 2000,
+					});
+				})
+				.catch((err) => {
+					this.$toast.error(this.i18nText.common.copyFail, {
+						timeout: 2000,
+					});
+				});
+		},
+	},
 };
 </script>

@@ -79,6 +79,18 @@
         top: 50%;
         transform: translate3d(0, -50%, 0);
         font-size: 0.14rem;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 0.1rem;
+          height: 0.13rem;
+          display: block;
+        }
+
+        span {
+          margin-left: 0.06rem;
+        }
       }
     }
 
@@ -355,9 +367,10 @@
           width: 100%;
           display: block;
           font-size: 0.16rem;
-          font-weight: bold;
+          font-weight: bolder;
           color: #fff;
           margin-bottom: 0.06rem;
+          // font-family: AlibabaPuHuiTi;
         }
 
         p {
@@ -373,16 +386,19 @@
 
   .partners_box {
     padding-bottom: 0.3rem;
+
     .partners_wrap {
       width: 100%;
       position: relative;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
       .partner {
         width: 29.3948%;
         display: block;
         margin-top: 0.11rem;
+
         img {
           width: 100%;
           display: block;

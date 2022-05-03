@@ -6,5 +6,11 @@ export default {
 		document: 'White Paper',
 		mint: 'MINT',
 	},
-	common: {},
+	common: {
+		success: 'Success',
+		fail: 'Fail',
+		copySuccess: 'Copy success',
+		copyFail: 'Copy fail',
+		copy: 'Copy',
+	},
 };
