@@ -9,27 +9,20 @@ import rem from '@/https/rem.js';
 import { i18n } from '@/locale';
 import publicMethod from './utils/public';
 import { registerComponent } from '@/components/base/index'; // 注册全局组件
-import VueFullpage from 'vue-fullpage.js';
 import Toast from 'vue-toastification';
 import 'vue-toastification/dist/index.css';
 import VueClipboard from 'vue-clipboard2';
 import webContract from './config/webContract';
-import VueSocialSharing from 'vue-social-sharing';
-import 'swiper/dist/css/swiper.css';
-import VueAwesomeSwiper from 'vue-awesome-swiper';
 import { Picker, Popup } from 'vant';
 import 'vant/lib/picker/style';
 import 'vant/lib/popup/style';
-Vue.use(Picker);
-Vue.use(Popup);
 
 // 注册全局插件
 import CommonComponent from './components/CommonComponent/index';
-Vue.use(VueAwesomeSwiper /* { default options with global component } */);
-Vue.use(VueSocialSharing);
 Vue.use(Toast, {});
-Vue.use(VueFullpage);
 Vue.use(axios);
+Vue.use(Picker);
+Vue.use(Popup);
 Vue.use(publicMethod);
 Vue.use(VueClipboard);
 Vue.use(webContract);

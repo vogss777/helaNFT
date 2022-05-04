@@ -30,10 +30,7 @@ module.exports = {
 	},
 	configureWebpack: (config) => {
 		config.entry.app = ['babel-polyfill', './src/main.js'];
-	},
-	chainWebpack: (config) => {
 		if (process.env.NODE_ENV === 'production') {
-			config.optimization.minimize(true);
 			return {
 				plugins: [
 					//打包环境去掉console.log
@@ -51,6 +48,11 @@ module.exports = {
 					}),
 				],
 			};
+		}
+	},
+	chainWebpack: (config) => {
+		if (process.env.NODE_ENV === 'production') {
+			config.optimization.minimize(true);
 		}
 		config.resolve.alias.set('@', resolve('src')); // key,value自行定义，比如.set('@@', resolve('src/components'))
 	},
