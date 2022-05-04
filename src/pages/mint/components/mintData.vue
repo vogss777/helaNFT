@@ -2,30 +2,28 @@
 	<div class="mint_data_wrap">
 		<div class="mint_data">
 			<div class="mint_item">
-				<h2>捐赠数量</h2>
+				<h2>{{ i18nText.common.donationText01 }}</h2>
 				<div class="tit">
-					<span>募捐单地址0.1BNB到2BNB</span>
+					<span>{{ i18nText.common.donationText02 }}</span>
 				</div>
 			</div>
 
 			<div class="mint_item">
-				<h2>捐赠比例</h2>
+				<h2>{{ i18nText.common.donationText03 }}</h2>
 				<div class="rate_box clearfix">
 					<span>0.1B=1000000HL</span>
-					<span>100%公开透明无预留</span>
+					<span>{{ i18nText.common.donationText04 }}</span>
 					<span class="martop">1B=10000000HL</span>
-					<span class="martop">上线进行NFT游戏挖矿板块</span>
+					<span class="martop">{{ i18nText.common.donationText05 }}</span>
 				</div>
 			</div>
 
 			<div class="mint_item">
-				<h2>捐赠奖励</h2>
+				<h2>{{ i18nText.common.donationText06 }}</h2>
 				<div class="tit award_tit">
-					<span>NFT可以加速释放募捐的额度的5到20%同时增加更多的收益方式</span>
-					<span
-						>每募捐0.3 BNB随机开盲盒赠送一个NFT，平台上线之后可进行NFT游戏挖矿板块，NFT在Dapp上面实现售卖转让功能</span
-					>
-					<span>NFT加速释放方式</span>
+					<span>{{ i18nText.common.donationText07 }}</span>
+					<span>{{ i18nText.common.donationText08 }}</span>
+					<span>{{ i18nText.common.donationText09 }}</span>
 				</div>
 				<div class="release_list">
 					<div class="release" v-for="(item, index) in releaseList" :key="index">
@@ -36,9 +34,9 @@
 			</div>
 
 			<div class="mint_item">
-				<h2>NFT分类</h2>
+				<h2>{{ i18nText.common.donationText10 }}</h2>
 				<div class="tit">
-					<span>后台设定抽出逻辑比例</span>
+					<span>{{ i18nText.common.donationText11 }}</span>
 				</div>
 				<div class="release_list nft_type_list">
 					<div class="release nft_type" :class="'title' + index" v-for="(item, index) in nftTypeList" :key="index">
@@ -49,9 +47,9 @@
 				</div>
 			</div>
 			<div class="mint_item">
-				<h2>NFT质押</h2>
+				<h2>{{ i18nText.common.donationText12 }}</h2>
 				<div class="tit">
-					<span>NFT+LP组合质押 LP价值大于或等于0.1B质押挖取USDT</span>
+					<span>{{ i18nText.common.donationText13 }}</span>
 				</div>
 				<div class="release_list nft_staking_list">
 					<div
@@ -66,7 +64,7 @@
 						<p>{{ item.value }}</p>
 					</div>
 				</div>
-        <span class="tips">单Lp质押挖矿只能获得质押价值5倍价值币USDT质押需1B≥LP≥0.1B </span>
+				<span class="tips">{{ i18nText.common.donationText14 }}</span>
 			</div>
 		</div>
 	</div>
@@ -79,30 +77,64 @@ export default {
 		return {};
 	},
 	computed: {
+		i18nText() {
+			return {
+				common: this.$t('common'),
+			};
+		},
 		releaseList() {
 			return [
-				{ text: 'K卡（Kronos）', value: '加速20%' },
-				{ text: 'R卡（Rhea）', value: '加速15%' },
-				{ text: 'Z卡（Zeus）', value: '加速10%' },
-				{ text: 'H卡（Hear）', value: '加速5%' },
+				{ text: `${this.i18nText.common.kcardText}（Kronos）`, value: `${this.i18nText.common.speedText}20%` },
+				{ text: `${this.i18nText.common.rcardText}（Rhea）`, value: `${this.i18nText.common.speedText}15%` },
+				{ text: `${this.i18nText.common.zcardText}（Zeus）`, value: `${this.i18nText.common.speedText}10%` },
+				{ text: `${this.i18nText.common.hcardText}（Hear）`, value: `${this.i18nText.common.speedText}5%` },
 			];
 		},
 		nftTypeList() {
 			return [
-				{ text: '卡片', rarity: '稀有度', value: '总量占比' },
-				{ text: 'K卡（Kronos）', rarity: '最高', value: '5%' },
-				{ text: 'R卡（Rhea）', rarity: '极高', value: '20%' },
-				{ text: 'Z卡（Zeus）', rarity: '高', value: '10%' },
-				{ text: 'H卡（Hear）', rarity: '普通', value: '70%' },
+				{
+					text: this.i18nText.common.cardText,
+					rarity: this.i18nText.common.rarityText,
+					value: this.i18nText.common.theAmount,
+				},
+				{ text: `${this.i18nText.common.kcardText}（Kronos）`, rarity: this.i18nText.common.rarityHigh1, value: '5%' },
+				{ text: `${this.i18nText.common.rcardText}（Rhea）`, rarity: this.i18nText.common.rarityHigh2, value: '20%' },
+				{ text: `${this.i18nText.common.zcardText}（Zeus）`, rarity: this.i18nText.common.rarityHigh3, value: '10%' },
+				{ text: `${this.i18nText.common.hcardText}（Hear）`, rarity: this.i18nText.common.rarityHigh4, value: '70%' },
 			];
 		},
 		nftStakingList() {
 			return [
-				{ text: '卡片', rarity: '获得质押价值', coin: '', value: '质押' },
-				{ text: 'K卡', rarity: '25倍价值币', coin: 'USDT', value: '3B≥LP≥0.1B' },
-				{ text: 'R卡', rarity: '20倍价值币', coin: 'USDT', value: '2B≥LP≥0.1B' },
-				{ text: 'Z卡', rarity: '15倍价值币', coin: 'USDT', value: '1.8B≥LP≥0.1B' },
-				{ text: 'H卡', rarity: '10倍价值币', coin: 'USDT', value: '1.5B≥LP≥0.1B ' },
+				{
+					text: this.i18nText.common.cardText,
+					rarity: this.i18nText.common.pledgeValue,
+					coin: '',
+					value: this.i18nText.common.pledgeText,
+				},
+				{
+					text: this.i18nText.common.kcardText,
+					rarity: `25${this.i18nText.common.valueCurrency}`,
+					coin: 'USDT',
+					value: '3B≥LP≥0.1B',
+				},
+				{
+					text: this.i18nText.common.rcardText,
+					rarity: `20${this.i18nText.common.valueCurrency}`,
+					coin: 'USDT',
+					value: '2B≥LP≥0.1B',
+				},
+				{
+					text: this.i18nText.common.zcardText,
+					rarity: `15${this.i18nText.common.valueCurrency}`,
+					coin: 'USDT',
+					value: '1.8B≥LP≥0.1B',
+				},
+				{
+					text: this.i18nText.common.hcardText,
+					rarity: `10${this.i18nText.common.valueCurrency}`,
+					coin: 'USDT',
+					value: '1.5B≥LP≥0.1B ',
+				},
 			];
 		},
 	},

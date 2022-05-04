@@ -1,6 +1,6 @@
 import token from '@/config/index.js';
 export default function inviteCode(that) {
-	let inviteCode = that.$route.query.inviteCode;
+	let inviteCode = that.$route.query.ref;
 	const code = localStorage.getItem('inviteCode');
 	if (!inviteCode) {
 		if (code === 'undefined' || code === 'null' || code === '' || !code) {
