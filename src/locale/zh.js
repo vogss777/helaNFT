@@ -3,6 +3,8 @@ export default {
 		success: '成功',
 		fail: '失败',
 		copy: '复制',
+		comfirm: '确定',
+		cancel: '取消',
 		copySuccess: '复制成功',
 		copyFail: '复制失败',
 		copyRight: '版权所有 2022 HLDAO',

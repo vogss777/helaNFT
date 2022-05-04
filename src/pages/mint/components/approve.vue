@@ -27,6 +27,9 @@
 						<van-picker
 							show-toolbar
 							:default-index="currentIndex"
+							:title="i18nText.common.donationAmount"
+							:confirm-button-text="i18nText.common.comfirm"
+							:cancel-button-text="i18nText.common.cancel"
 							:columns="columns"
 							@confirm="onConfirm"
 							@cancel="onCancel"

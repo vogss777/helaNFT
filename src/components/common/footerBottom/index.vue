@@ -2,15 +2,7 @@
 	<div class="footer_bottom">
 		<div class="footer">
 			<div class="relate_icon">
-				<a
-					:href="item.url"
-					:target="item.target"
-					v-for="(item, index) in relateIcon"
-					:class="{ on: relateIndex === index }"
-					@mouseleave="relateIndex = -1"
-					@mouseenter="relateIndex = index"
-					:key="index"
-				>
+				<a :href="item.url" :target="item.target" v-for="(item, index) in relateIcon" :key="index">
 					<img :src="item.img" class="one" alt="" />
 					<img :src="item.act_img" class="two" alt="" />
 				</a>
@@ -26,9 +18,7 @@
 export default {
 	name: 'footerBottom',
 	data() {
-		return {
-			relateIndex: -1,
-		};
+		return {};
 	},
 	computed: {
 		i18nText() {

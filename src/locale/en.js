@@ -5,6 +5,8 @@ export default {
 		copySuccess: 'Copy success',
 		copyFail: 'Copy fail',
 		copy: 'Copy',
+		comfirm: 'Comfirm',
+		cancel: 'Cancel',
 		copyRight: 'Copyright 2022 HLDAO',
 		home: 'Home',
 		mint: 'Mint',
