@@ -2,6 +2,7 @@
   width: 100%;
   position: relative;
   padding: 0 0.14rem;
+  font-family: PingFangSC-Regular, PingFang SC;
 
   .common_box {
     margin-top: 0.4rem;
@@ -73,6 +74,7 @@
       width: 100%;
       position: relative;
       margin-bottom: 0.15rem;
+      font-family: PingFangSC-Regular, PingFang SC;
 
       .copy_t {
         position: absolute;
@@ -182,7 +184,7 @@
         transition();
 
         &:hover {
-          transform: scale(1.03);
+          transform: scale(1.06);
         }
 
         img {
@@ -252,7 +254,7 @@
         overflow: hidden;
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap
+        flex-wrap: wrap;
 
         .point_box {
           width: 50%;
@@ -403,9 +405,16 @@
         display: block;
         margin-top: 0.11rem;
 
+        &:hover {
+          img {
+            transform: scale(1.1) rotate(20deg);
+          }
+        }
+
         img {
           width: 100%;
           display: block;
+          transition();
         }
       }
     }
