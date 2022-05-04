@@ -17,6 +17,11 @@ import webContract from './config/webContract';
 import VueSocialSharing from 'vue-social-sharing';
 import 'swiper/dist/css/swiper.css';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
+import { Picker, Popup } from 'vant';
+import 'vant/lib/picker/style';
+import 'vant/lib/popup/style';
+Vue.use(Picker);
+Vue.use(Popup);
 
 // 注册全局插件
 import CommonComponent from './components/CommonComponent/index';

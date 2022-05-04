@@ -45,7 +45,7 @@
         width: 100%;
         text-align: center;
         font-size: 0.16rem;
-        font-weight: 500;
+        font-weight: bold;
         color: #DEBC5C;
         line-height: 0.16rem;
 
@@ -196,6 +196,388 @@
         font-weight: bold;
         color: #645F52;
         text-shadow: 1px 2px 1px #000;
+      }
+    }
+  }
+
+  .mint_data_wrap {
+    width: 100%;
+    position: relative;
+    margin-top: 0.18rem;
+
+    .mint_data {
+      width: 100%;
+      position: relative;
+      padding: 0 0.11rem 0 0.12rem;
+      background-repeat: repeat;
+      background-position: center top;
+      background-image: url('~@/assets/images/mint_content.png');
+      background-size: 100% 100%;
+
+      .mint_item {
+        width: 100%;
+        padding: 0.19rem 0 0.24rem;
+        position: relative;
+        margin-bottom: 0.03rem;
+
+        &:before {
+          line-bottom();
+        }
+
+        h2 {
+          width: 100%;
+          position: relative;
+          padding-left: 0.1rem;
+          font-size: 0.16rem;
+          font-weight: bold;
+          color: #DEBC5C;
+          line-height: 0.2rem;
+          margin-bottom: 0.14rem;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0.04rem;
+            height: 0.14rem;
+            background: #DEBC5C;
+            border-radius: 0.02rem;
+            transform: translate3d(0, -50%, 0);
+          }
+        }
+
+        .tips {
+          font-size: 0.12rem;
+          font-weight: 400;
+          color: #DEBC5C;
+          line-height: 0.13rem;
+          margin-top: 0.15rem;
+          width: 100%;
+          display: block;
+          text-align: justify;
+        }
+
+        .tit {
+          width: 100%;
+          position: relative;
+
+          &.award_tit {
+            span {
+              margin-bottom: 0.15rem;
+            }
+          }
+
+          span {
+            font-size: 0.12rem;
+            color: #F2F2F2;
+            line-height: 0.13rem;
+            display: block;
+          }
+        }
+
+        .rate_box {
+          width: 100%;
+          position: relative;
+
+          span {
+            float: left;
+            width: 50%;
+            color: #F2F2F2;
+            line-height: 0.13rem;
+          }
+
+          .martop {
+            margin-top: 0.07rem;
+          }
+        }
+
+        .release_list {
+          width: 100%;
+          position: relative;
+
+          .title0 {
+            font-size: 0.14rem;
+            font-weight: 400;
+            color: #979797;
+            line-height: 0.18rem;
+          }
+
+          .release {
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            line-height: 0.13rem;
+            margin-bottom: 0.12rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            span {
+              color: #979797;
+            }
+          }
+
+          .nft_type {
+            .long {
+              width: 50%;
+            }
+
+            .short {
+              width: 25%;
+            }
+
+            p {
+              &:last-child {
+                text-align: right;
+              }
+            }
+          }
+
+          .nft_staking {
+            p {
+              &:first-child {
+                width: 15%;
+              }
+
+              &:nth-of-type(2) {
+                width: 35%;
+              }
+
+              &:nth-of-type(3) {
+                width: 20%;
+              }
+
+              &:last-child {
+                width: 30%;
+                text-align: right;
+              }
+            }
+          }
+        }
+
+        .nft_type_list {
+          margin-top: 0.19rem;
+        }
+
+        .nft_staking_list {
+          margin-top: 0.19rem;
+        }
+      }
+    }
+  }
+
+  .approve_components {
+    width: 100%;
+    position: relative;
+
+    .approve_content {
+      width: 100%;
+      position: relative;
+      padding: 0.16rem 0.11rem 0.28rem 0.12rem;
+      background-repeat: repeat;
+      background-position: center top;
+      background-image: url('~@/assets/images/approve_bg.png');
+      background-size: 100% 100%;
+
+      .title {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        line-height: 0.2rem;
+        font-size: 0.11rem;
+        color: #F2F2F2;
+        margin-bottom: 0.15rem;
+
+        span {
+          font-size: 0.16rem;
+          font-weight: bold;
+        }
+      }
+
+      .balance_box {
+        width: 100%;
+        position: relative;
+        padding-bottom: 0.16rem;
+
+        &:before {
+          line-bottom();
+        }
+
+        .balance_value {
+          width: 100%;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.11rem;
+          font-weight: 400;
+          color: #F2F2F2;
+          line-height: 0.13rem;
+          margin-bottom: 0.07rem;
+
+          span {
+            color: #979797;
+          }
+        }
+      }
+
+      .approve_wrapper {
+        width: 100%;
+        position: relative;
+        padding-top: 0.21rem;
+
+        h3 {
+          color: #F2F2F2;
+          font-size: 0.16rem;
+          font-weight: bold;
+          width: 100%;
+          margin-bottom: 0.13rem;
+        }
+
+        .donate_select_box {
+          width: 100%;
+          position: relative;
+
+          .select_wrap {
+            width: 69.4%;
+            height: 0.24rem;
+            background: #4B4B3B;
+            border-radius: 0.12rem;
+            overflow: hidden;
+            padding: 0 0.17rem;
+            font-size: 0.13rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            em {
+              position: absolute;
+              top: 50%;
+              right: 0.17rem;
+              width: 0;
+              height: 0;
+              line-height: 0;
+              font-size: 0;
+              border-width: 0.08rem 0.07rem;
+              margin-top: -0.03rem;
+              border-style: solid dashed dashed dashed;
+              border-color: #22221C transparent transparent transparent;
+            }
+          }
+
+          .select_button {
+            min-width: 22.8%;
+            max-width: 28%;
+            height: 0.24rem;
+
+            a {
+              color: #fff;
+              display: block;
+              height: 100%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: #DEBC5C;
+              border-radius: 0.15rem;
+            }
+          }
+        }
+      }
+
+      .lock_withdraw {
+        width: 100%;
+        position: relative;
+        margin: 0.21rem 0 0.17rem;
+
+        .lock_box, .withdraw_box {
+          width: 1.48rem;
+          height: 0.59rem;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .locks {
+            width: 100%;
+            text-align: center;
+            line-height: 0.18rem;
+
+            span {
+              width: 100%;
+              display: block;
+              font-size: 0.11rem;
+              font-weight: 400;
+              color: #FFFFFF;
+              margin-bottom: 0.04rem;
+            }
+
+            p {
+              font-size: 0.18rem;
+              font-weight: bold;
+              color: #F2F2F2;
+            }
+          }
+
+          &:before {
+            line-around(#DEBC5C);
+          }
+        }
+      }
+
+      .down_time_wrap {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin-bottom: 0.17rem;
+
+        .time_item_wrap {
+          display: inline-block;
+          height: 0.5rem;
+          overflow: hidden;
+
+          .time_item {
+            width: 0.49rem;
+            height: 0.49rem;
+            position: relative;
+            margin: 0 0.14rem;
+            padding: 0.11rem 0 0.06rem;
+            font-size: 0.1rem;
+            color: #979797;
+            line-height: 0.12rem;
+
+            &:before {
+              line-around(#fff);
+            }
+
+            span {
+              font-size: 0.2rem;
+              font-weight: bold;
+              color: #FFFFFF;
+              line-height: 0.2rem;
+            }
+          }
+        }
+      }
+
+      .withdraw_button {
+        width: 100%;
+        position: relative;
+
+        a {
+          width: 100%;
+          height: 0.24rem;
+          background: #DEBC5C;
+          border-radius: 0.15rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          font-size: 0.12rem;
+        }
       }
     }
   }

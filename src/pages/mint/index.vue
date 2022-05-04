@@ -1,7 +1,9 @@
 <template>
 	<div class="inner_mint">
 		<CommonComponent path="pages/mint/components/donate"></CommonComponent>
+		<CommonComponent path="pages/mint/components/approve"></CommonComponent>
 		<CommonComponent path="pages/mint/components/invited"></CommonComponent>
+		<CommonComponent path="pages/mint/components/mintData"></CommonComponent>
 	</div>
 </template>
 
