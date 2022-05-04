@@ -1,14 +1,14 @@
 <template>
 	<div class="through_model common_box">
-		<div class="common_title">通证模型</div>
+		<div class="common_title">{{ i18nText.common.throughModel }}</div>
 		<div class="hl_token_wrap">
 			<div class="hl_title clearfix">
 				<img src="@/assets/images/h_img.png" alt="" />
-				<p class="fl">HL TOKEN</p>
-				<span class="fr">总量：999亿</span>
+				<p class="fl">{{ i18nText.common.throughToken }}</p>
+				<span class="fr">{{ i18nText.common.throughTotal }}：999{{ i18nText.common.throughMillion }}</span>
 			</div>
 			<div class="hl_content clearfix">
-				<div class="point_box fl" :class="item.className" v-for="(item, index) in pointList" :key="index">
+				<div class="point_box" :class="item.className" v-for="(item, index) in pointList" :key="index">
 					<span>{{ item.title }}</span>
 					<p>{{ item.value }}</p>
 				</div>
@@ -24,25 +24,30 @@ export default {
 		return {};
 	},
 	computed: {
+		i18nText() {
+			return {
+				common: this.$t('common'),
+			};
+		},
 		pointList() {
 			return [
 				{
-					title: '买卖滑点',
+					title: this.i18nText.common.throughText01,
 					value: '9%',
 					className: 'left',
 				},
 				{
-					title: '回流资金池',
+					title: this.i18nText.common.throughText02,
 					value: '9%',
 					className: 'right',
 				},
 				{
-					title: '持币分红',
+					title: this.i18nText.common.throughText03,
 					value: '9%',
 					className: 'left',
 				},
 				{
-					title: '营销资金',
+					title: this.i18nText.common.throughText04,
 					value: '9%',
 					className: 'right',
 				},

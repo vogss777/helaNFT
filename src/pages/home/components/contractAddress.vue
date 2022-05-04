@@ -1,10 +1,10 @@
 <template>
 	<div class="contract_address">
 		<div class="adre">
-			<h3>合约地址</h3>
+			<h3>{{ i18nText.common.contractAddress }}</h3>
 			<div class="copy_t" @click="copyAddress">
 				<img src="@/assets/images/copy.png" alt="" />
-				<span>复制</span>
+				<span>{{ i18nText.common.copy }}</span>
 			</div>
 		</div>
 		<span class="address">{{ contractAddress }}</span>

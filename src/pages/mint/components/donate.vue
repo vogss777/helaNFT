@@ -1,6 +1,6 @@
 <template>
 	<div class="donate_content">
-		<h2>当前捐赠BNB</h2>
+		<h2>{{ i18nText.common.currentDonation }}BNB</h2>
 		<div class="donate_value">
 			<img src="@/assets/images/circle.png" alt="" />
 			<div class="d_v">
@@ -24,6 +24,11 @@ export default {
 		return {};
 	},
 	computed: {
+		i18nText() {
+			return {
+				common: this.$t('common'),
+			};
+		},
 		timeList() {
 			return [
 				{

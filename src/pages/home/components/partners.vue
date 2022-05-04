@@ -1,6 +1,6 @@
 <template>
 	<div class="partners_box common_box">
-		<div class="common_title">合作机构</div>
+		<div class="common_title">{{ i18nText.common.partners }}</div>
 		<div class="partners_wrap">
 			<a href="javascript:;" class="partner" v-for="(item, index) in partnersList" :key="index">
 				<img :src="item.img" alt="" />
@@ -16,6 +16,11 @@ export default {
 		return {};
 	},
 	computed: {
+		i18nText() {
+			return {
+				common: this.$t('common'),
+			};
+		},
 		partnersList() {
 			return [
 				{

@@ -1,6 +1,6 @@
 <template>
 	<div class="get_nft_box common_box">
-		<div class="common_title">获得NFT</div>
+		<div class="common_title">{{ i18nText.common.getNft }}</div>
 		<div class="nft_img_box">
 			<a href="javascript:;" class="nft_img" v-for="(item, index) in nftImgList" :key="index">
 				<img :src="item.img" alt="" />
@@ -17,6 +17,11 @@ export default {
 		return {};
 	},
 	computed: {
+		i18nText() {
+			return {
+				common: this.$t('common'),
+			};
+		},
 		nftImgList() {
 			return [
 				{

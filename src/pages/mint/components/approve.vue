@@ -2,7 +2,7 @@
 	<div class="approve_components">
 		<div class="approve_content">
 			<div class="title">
-				<span>钱包金额</span>
+				<span>{{ i18nText.common.walletAmount }}</span>
 				<p>123.00BNB</p>
 			</div>
 			<div class="balance_box">
@@ -12,20 +12,19 @@
 				</div>
 			</div>
 			<div class="approve_wrapper">
-				<h3>捐赠金额</h3>
+				<h3>{{ i18nText.common.donationAmount }}</h3>
 				<div class="donate_select_box clearfix">
 					<div class="select_wrap fl" @click="showFlag = !showFlag">
 						<span>{{ currentValue }}</span>
 						<em></em>
 					</div>
 					<div class="select_button fr">
-						<a href="javascript:;">捐赠</a>
+						<a href="javascript:;">{{ i18nText.common.donationText }}</a>
 					</div>
 				</div>
 				<template>
 					<van-popup v-model="showFlag" position="bottom">
 						<van-picker
-							title="标题"
 							show-toolbar
 							:default-index="currentIndex"
 							:columns="columns"
@@ -53,7 +52,7 @@
 				</div>
 			</div>
 			<div class="withdraw_button">
-				<a href="javascript:;">提取</a>
+				<a href="javascript:;">{{ i18nText.common.withdraw }}</a>
 			</div>
 		</div>
 	</div>
@@ -71,19 +70,24 @@ export default {
 		};
 	},
 	computed: {
+		i18nText() {
+			return {
+				common: this.$t('common'),
+			};
+		},
 		currentValue() {
 			return this.columns[this.currentIndex];
 		},
 		balanceValue() {
 			return [
-				{ text: 'HL持仓', value: '0.00HL' },
-				{ text: '兑换比例', value: '1 BNB = 100000HL' },
+				{ text: this.i18nText.common.hlHolder, value: '0.00HL' },
+				{ text: this.i18nText.common.convertible, value: '1 BNB = 100000HL' },
 			];
 		},
 		lockValue() {
 			return [
-				{ text: '锁定XYC', value: '100000', className: 'lock_box fl' },
-				{ text: '可提现XYC', value: '100', className: 'withdraw_box fr' },
+				{ text: `${this.i18nText.common.lockText}XYC`, value: '100000', className: 'lock_box fl' },
+				{ text: `${this.i18nText.common.canWithdraw}XYC`, value: '100', className: 'withdraw_box fr' },
 			];
 		},
 		timeValue() {
@@ -97,12 +101,12 @@ export default {
 	},
 	methods: {
 		onConfirm(value, index) {
-			console.log(`当前值：${value}, 当前索引：${index}`);
+			// console.log(`当前值：${value}, 当前索引：${index}`);
 			this.currentIndex = index;
 			this.showFlag = false;
 		},
 		onCancel() {
-			console.log('取消');
+			// console.log('取消');
 			this.showFlag = false;
 		},
 	},

@@ -16,7 +16,7 @@
 				</a>
 			</div>
 			<div class="copy_right">
-				<span>版权所有 2022 HLDAO</span>
+				<span>{{ i18nText.common.copyRight }}</span>
 			</div>
 		</div>
 	</div>
@@ -31,6 +31,11 @@ export default {
 		};
 	},
 	computed: {
+		i18nText() {
+			return {
+				common: this.$t('common'),
+			};
+		},
 		relateIcon() {
 			return [
 				{

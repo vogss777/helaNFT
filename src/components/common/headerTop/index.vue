@@ -20,10 +20,10 @@
 			<div class="navs_list_wrap" v-show="firstShow">
 				<div class="navs_list">
 					<div class="navs">
-						<router-link to="/" @click.native="firstShow = false" class="tit">Home</router-link>
+						<router-link to="/" @click.native="firstShow = false" class="tit">{{ i18nText.common.home }}</router-link>
 					</div>
 					<div class="navs">
-						<router-link to="/mint" @click.native="firstShow = false" class="tit">Mint</router-link>
+						<router-link to="/mint" @click.native="firstShow = false" class="tit">{{ i18nText.common.mint }}</router-link>
 					</div>
 				</div>
 			</div>
@@ -53,6 +53,11 @@ export default {
 		// 当前语言
 		currentLangText() {
 			return this.langId === 'en_US' ? '简体中文' : 'ENGLISH';
+		},
+		i18nText() {
+			return {
+				common: this.$t('common'),
+			};
 		},
 	},
 	methods: {
