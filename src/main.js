@@ -19,7 +19,7 @@ import 'vant/lib/popup/style';
 
 // 注册全局插件
 import CommonComponent from './components/CommonComponent/index';
-Vue.use(Toast, {});
+Vue.use(Toast);
 Vue.use(axios);
 Vue.use(Picker);
 Vue.use(Popup);

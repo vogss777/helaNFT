@@ -82,5 +82,6 @@ export default {
 		pledgeValue: '获得质押价值',
 		pledgeText: '质押',
 		valueCurrency: '倍价值币',
+		notMoney: '余额不足',
 	},
 };

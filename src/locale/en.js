@@ -90,5 +90,6 @@ export default {
 		pledgeValue: 'Get pledge value',
 		pledgeText: 'Pledge',
 		valueCurrency: ' times the value currency',
+		notMoney: 'Not sufficient funds',
 	},
 };

@@ -38,17 +38,17 @@ export default {
 				},
 				{
 					title: this.i18nText.common.throughText02,
-					value: '9%',
+					value: '2%',
 					className: 'right',
 				},
 				{
 					title: this.i18nText.common.throughText03,
-					value: '9%',
+					value: '2%',
 					className: 'left',
 				},
 				{
 					title: this.i18nText.common.throughText04,
-					value: '9%',
+					value: '5%',
 					className: 'right',
 				},
 			];

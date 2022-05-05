@@ -79,6 +79,10 @@
       justify-content: space-between;
       padding: 0 0.3rem;
 
+      &.hide {
+        visibility: hidden;
+      }
+
       .times {
         flex: 1;
         text-align: center;
@@ -579,6 +583,9 @@
           justify-content: center;
           color: #fff;
           font-size: 0.12rem;
+          &.disabled {
+            background: #999;  
+          }
         }
       }
     }

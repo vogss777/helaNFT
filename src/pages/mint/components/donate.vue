@@ -4,7 +4,7 @@
 		<div class="donate_value">
 			<img src="@/assets/images/circle.png" alt="" />
 			<div class="d_v">
-				<span>844,64</span>
+				<span>{{ currentExBNB }}</span>
 				<p>BNB</p>
 			</div>
 		</div>
@@ -24,6 +24,21 @@ export default {
 		return {};
 	},
 	computed: {
+		contractMethod() {
+			return this.$store.state.contractMethod;
+		},
+		commonMethod() {
+			return this.contractMethod.commonMethod;
+		},
+		currentDonwTime() {
+			return this.commonMethod.currentDonwTime;
+		},
+		currentExBNB() {
+			if (this.commonMethod.currentExBNB === '0.0') {
+				return 0;
+			}
+			return this.commonMethod.currentExBNB;
+		},
 		i18nText() {
 			return {
 				common: this.$t('common'),
@@ -32,19 +47,19 @@ export default {
 		timeList() {
 			return [
 				{
-					value: '24',
+					value: this.currentDonwTime.d,
 					time: 'Days',
 				},
 				{
-					value: '12',
+					value: this.currentDonwTime.m,
 					time: 'Hours',
 				},
 				{
-					value: '59',
+					value: this.currentDonwTime.m,
 					time: 'Minutes',
 				},
 				{
-					value: '59',
+					value: this.currentDonwTime.s,
 					time: 'Seconds',
 				},
 			];

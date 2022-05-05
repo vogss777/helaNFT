@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="next_time_box">
-			<span>{{ i18nText.common.nextTime }}：2022-04-02</span>
+			<span>{{ i18nText.common.nextTime }}：{{ nextTime() }}</span>
 		</div>
 	</div>
 </template>
@@ -27,6 +27,18 @@ export default {
 		return {};
 	},
 	computed: {
+		contractMethod() {
+			return this.$store.state.contractMethod;
+		},
+		commonMethod() {
+			return this.contractMethod.commonMethod;
+		},
+		blockTime() {
+			return this.commonMethod.blockTime;
+		},
+		currentEndTime() {
+			return this.commonMethod.currentEndTime;
+		},
 		i18nText() {
 			return {
 				common: this.$t('common'),
@@ -41,6 +53,9 @@ export default {
 		},
 	},
 	methods: {
+		nextTime() {
+			return this.publicMethod.formatTime(this.currentEndTime * 1000, 'yyyy-MM-dd') || '0000-00-00';
+		},
 		copyAddress() {
 			this.$copyText(this.inviteAddress)
 				.then((result) => {
