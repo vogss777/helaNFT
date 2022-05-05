@@ -48,19 +48,19 @@ export default {
 			return [
 				{
 					value: this.currentDonwTime.d,
-					time: 'Days',
+					time: this.i18nText.common.days,
 				},
 				{
 					value: this.currentDonwTime.m,
-					time: 'Hours',
+					time: this.i18nText.common.hours,
 				},
 				{
 					value: this.currentDonwTime.m,
-					time: 'Minutes',
+					time: this.i18nText.common.minutes,
 				},
 				{
 					value: this.currentDonwTime.s,
-					time: 'Seconds',
+					time: this.i18nText.common.seconds,
 				},
 			];
 		},

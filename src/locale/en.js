@@ -9,7 +9,7 @@ export default {
 		cancel: 'Cancel',
 		copyRight: 'Copyright 2022 HLDAO',
 		home: 'Home',
-		mint: 'Mint',
+		mint: 'Fundraising',
 		bannerTitle: 'Hera NFT Trading Platform',
 		bannerText:
 			'Cross-chain relationship DeFi incubator, ILO and NFT launchpad to explore HLBOX, early access to top DeFi, GameFi and NFT projects launched on BSC, Fantom and Polygon',
@@ -51,8 +51,8 @@ export default {
 		withdraw: 'Withdraw',
 		hlHolder: 'HL Holder',
 		convertible: 'Convertible ratio',
-		lockText: 'Lock',
-		canWithdraw: 'Withdrawable',
+		lockText: 'Lock ',
+		canWithdraw: 'Withdrawable ',
 		currentDonation: 'Current donation ',
 		invitedUrl: 'My promotion link',
 		invitedText:
@@ -90,6 +90,10 @@ export default {
 		pledgeValue: 'Get pledge value',
 		pledgeText: 'Pledge',
 		valueCurrency: ' times the value currency',
-		notMoney: 'Not sufficient funds',
+		notMoney: 'Insufficient funds in wallet',
+		days: 'Days',
+		hours: 'Hours',
+		minutes: 'Minutes',
+		seconds: 'Seconds',
 	},
 };
