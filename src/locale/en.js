@@ -59,7 +59,7 @@ export default {
 			'Recommending a new address with a donation recommendation code can accelerate the release of 10% of the donation amount of the recommended address',
 		nextTime: 'Extraction time',
 		donationText01: 'Donation amount',
-		donationText02: 'Donation single address 0.1BNB to 2BNB',
+		donationText02: 'Donation single address 0.1 BNB to 2 BNB',
 		donationText03: 'Donation ratio',
 		donationText04: '100% open and transparent without reservation',
 		donationText05: 'Go online for NFT game mining section',
