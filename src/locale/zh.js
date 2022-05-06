@@ -9,7 +9,7 @@ export default {
 		copyFail: '复制失败',
 		copyRight: '版权所有 2022 HLDAO',
 		home: '首页',
-		mint: 'Mint',
+		mint: '捐赠',
 		bannerTitle: '赫拉NFT交易平台',
 		bannerText:
 			'跨链关系DeFi孵化器、ILO和NFT启动板探索HLBOX，尽早访问在 BSC、Fantom和Polygon上启动的顶级DeFi、GameFi和NFT项目',
