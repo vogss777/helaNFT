@@ -498,14 +498,17 @@
         width: 100%;
         position: relative;
         margin: 0.21rem 0 0.17rem;
+        display: flex;
+        justify-content: space-between;
 
         .lock_box, .withdraw_box {
           width: 1.48rem;
-          height: 0.59rem;
+          // height: 0.59rem;
           position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
+          padding: 0.1rem 0;
 
           .locks {
             width: 100%;
@@ -525,6 +528,8 @@
               font-size: 0.18rem;
               font-weight: bold;
               color: #F2F2F2;
+              padding: 0 0.1rem;
+              word-break: break-all;
             }
           }
 
@@ -583,8 +588,9 @@
           justify-content: center;
           color: #fff;
           font-size: 0.12rem;
+
           &.disabled {
-            background: #999;  
+            background: #999;
           }
         }
       }

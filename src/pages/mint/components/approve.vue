@@ -38,7 +38,7 @@
 				</template>
 			</div>
 
-			<div class="lock_withdraw clearfix">
+			<div class="lock_withdraw">
 				<div v-for="(item, index) in lockValue" :class="item.className" :key="index">
 					<div class="locks">
 						<span>{{ item.text }}</span>
@@ -127,13 +127,25 @@ export default {
 				{ text: this.i18nText.common.convertible, value: '1 BNB = 100000HL' },
 			];
 		},
+		remainingHL() {
+			if (this.userinfo.remainingHL === '0.0') {
+				return 0;
+			}
+			return this.userinfo.remainingHL;
+		},
+		unlockRatio() {
+			if (this.userinfo.unlockRatio === '0.0') {
+				return 0;
+			}
+			return this.userinfo.unlockRatio;
+		},
 		lockValue() {
 			return [
-				{ text: `${this.i18nText.common.lockText}HL`, value: this.userinfo.remainingHL, className: 'lock_box fl' },
+				{ text: `${this.i18nText.common.lockText}HL`, value: this.remainingHL, className: 'lock_box' },
 				{
 					text: `${this.i18nText.common.canWithdraw}HL`,
-					value: this.userinfo.unlockRatio,
-					className: 'withdraw_box fr',
+					value: this.unlockRatio,
+					className: 'withdraw_box',
 				},
 			];
 		},

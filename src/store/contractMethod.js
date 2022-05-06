@@ -137,10 +137,10 @@ export default {
 		// 用户信息
 		SETUSERINFO(state, data) {
 			state.userinfo.unlockTime = data.unlockTime;
-			state.userinfo.remainingHL = data.remainingHL;
+			state.userinfo.remainingHL = utils.formatUnits(data.remainingHL.toString(), '18').toString();
 		},
 		SETUNLOCKRATIO(state, data) {
-			state.userinfo.unlockRatio = data;
+			state.userinfo.unlockRatio = utils.formatUnits(data.toString(), '18').toString();
 		},
 	},
 };
