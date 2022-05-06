@@ -157,6 +157,9 @@ export default {
 				{ text: 'S', time: this.currentDonwTime.s },
 			];
 		},
+		inviteAddress() {
+			return this.$store.state.instance.inviteAddress
+		}
 	},
 	methods: {
 		async getWalletBalance() {
@@ -213,7 +216,7 @@ export default {
 		async submitDonation() {
 			this.isLoading = true;
 			const walletBalance = await getBalance(this);
-			console.log('+totalValue', totalValue);
+			console.log('+totalValue', totalValue, this.inviteAddress);
 			if (this.currentValue > walletBalance) {
 				this.$toast.error(this.i18nText.common.notMoney, {
 					timeout: 4000,
@@ -224,7 +227,7 @@ export default {
 			const totalValue = this.ethers.utils.parseUnits(this.currentValue.toString(), '18') + '';
 			console.log('+totalValue', totalValue);
 			this.currentInstance
-				.Buy({ value: totalValue })
+				.Buy(this.inviteAddress, { value: totalValue })
 				.then((result) => {
 					this.sendWait();
 					result
