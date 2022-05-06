@@ -50,14 +50,20 @@ export default {
 			}
 			return i;
 		},
-		showtime(donwTime) {
+		showtime() {
+			if (this.timer) {
+				// 调用之前，先清理，防止一直生成对象
+				clearTimeout(this.timer);
+				this.timer = null;
+			}
+			console.log('this.timer', this.timer);
 			// var nowtime = new Date();
 			// var endtime = this.currentEndTime * 1000;
 			console.log('nowtime', this.originTime);
-			var d = parseInt(this.originTime / (24 * 60 * 60));
-			var h = parseInt((this.originTime / (60 * 60)) % 24);
-			var m = parseInt((this.originTime / 60) % 60);
-			var s = parseInt(this.originTime % 60);
+			var d = Math.floor(this.originTime / (24 * 60 * 60));
+			var h = Math.floor((this.originTime / (60 * 60)) % 24);
+			var m = Math.floor((this.originTime / 60) % 60);
+			var s = Math.floor(this.originTime % 60);
 			h = this.addZero(h);
 			m = this.addZero(m);
 			s = this.addZero(s);
@@ -71,10 +77,13 @@ export default {
 				this.$store.commit('SERCURRENTDOWNTIME', { d: '0', h: '00', m: '00', s: '00', flag: false });
 				return;
 			}
-			this.timer = setTimeout(this.showtime, 1000);
+			if (!this.timer) {
+				this.timer = setTimeout(this.showtime, 1000);
+			}
 		},
 	},
-	destroyed() {
+	beforeDestroy() {
+		console.log('清除定时器', this.timer);
 		if (this.timer) {
 			clearTimeout(this.timer);
 			this.timer = null;
