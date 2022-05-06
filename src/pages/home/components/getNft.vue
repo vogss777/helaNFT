@@ -74,6 +74,7 @@ export default {
 	},
 	mounted() {
 		bus.$on('getImg', this.getImg);
+		this.getImg();
 	},
 	methods: {
 		fetchImg(array) {

@@ -8,7 +8,7 @@ export default [
 		component: () => import('@/pages/home/index'),
 	},
 	{
-		path: '/mint',
+		path: '/fundraising',
 		name: 'mint',
 		meta: {
 			title: 'mint',

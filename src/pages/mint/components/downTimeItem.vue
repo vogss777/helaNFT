@@ -37,8 +37,11 @@ export default {
 	methods: {
 		initTime() {
 			this.flag = false;
-			let donwTime = this.currentEndTime * 1000 - this.blockTime * 1000;
-			this.showtime(donwTime); // 传递秒数
+			// let donwTime = this.currentEndTime * 1000 - this.blockTime * 1000;
+			this.originTime = this.currentEndTime * 1000 - this.blockTime * 1000;
+			console.log('结束时间', this.publicMethod.formatTime(this.currentEndTime * 1000));
+			console.log('区块时间', this.publicMethod.formatTime(this.blockTime * 1000));
+			this.showtime(); // 传递秒数
 		},
 		addZero(i) {
 			if (i < 10) {
@@ -46,21 +49,24 @@ export default {
 			}
 			return i;
 		},
-		showtime() {
-			var nowtime = new Date();
-			var endtime = this.currentEndTime * 1000;
-			var lefttime = parseInt((endtime - nowtime.getTime()) / 1000);
-			var d = parseInt(lefttime / (24 * 60 * 60));
-			var h = parseInt((lefttime / (60 * 60)) % 24);
-			var m = parseInt((lefttime / 60) % 60);
-			var s = parseInt(lefttime % 60);
+		showtime(donwTime) {
+			// var nowtime = new Date();
+			// var endtime = this.currentEndTime * 1000;
+			console.log('nowtime', this.originTime);
+			var d = parseInt(this.originTime / (1000 * 24 * 60 * 60));
+			var h = parseInt((this.originTime / (1000 * 60 * 60)) % 24);
+			var m = parseInt((this.originTime / (1000 * 60)) % 60);
+			var s = parseInt((this.originTime / 1000) % 60);
 			h = this.addZero(h);
 			m = this.addZero(m);
 			s = this.addZero(s);
+			console.log('da', '' + d + ' - ' + h + ':' + m + ':' + s);
 			// this.donwTime = '' + d + ' - ' + h + ':' + m + ':' + s;
 			this.$store.commit('SERCURRENTDOWNTIME', { d, h, m, s, flag: true });
-			if (lefttime <= 0) {
+			this.originTime = this.originTime - 1000;
+			if (this.originTime <= 0) {
 				// this.donwTime = '--';
+				this.originTime = 0;
 				this.$store.commit('SERCURRENTDOWNTIME', { d: '0', h: '00', m: '00', s: '00', flag: false });
 				return;
 			}

@@ -152,7 +152,7 @@ export default {
 		timeValue() {
 			return [
 				{ text: 'D', time: this.currentDonwTime.d },
-				{ text: 'H', time: this.currentDonwTime.m },
+				{ text: 'H', time: this.currentDonwTime.h },
 				{ text: 'M', time: this.currentDonwTime.m },
 				{ text: 'S', time: this.currentDonwTime.s },
 			];

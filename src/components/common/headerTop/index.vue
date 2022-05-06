@@ -23,7 +23,7 @@
 						<router-link to="/" @click.native="firstShow = false" class="tit">{{ i18nText.common.home }}</router-link>
 					</div>
 					<div class="navs">
-						<router-link to="/mint" @click.native="firstShow = false" class="tit">{{ i18nText.common.mint }}</router-link>
+						<router-link to="/fundraising" @click.native="firstShow = false" class="tit">{{ i18nText.common.mint }}</router-link>
 					</div>
 				</div>
 			</div>

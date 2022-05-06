@@ -51,7 +51,7 @@ export default {
 					time: this.i18nText.common.days,
 				},
 				{
-					value: this.currentDonwTime.m,
+					value: this.currentDonwTime.h,
 					time: this.i18nText.common.hours,
 				},
 				{
