@@ -9,6 +9,7 @@ export default {
 		return {
 			flag: true,
 			donwTime: {},
+			timer: null,
 		};
 	},
 	computed: {
@@ -63,15 +64,21 @@ export default {
 			console.log('da', '' + d + ' - ' + h + ':' + m + ':' + s);
 			// this.donwTime = '' + d + ' - ' + h + ':' + m + ':' + s;
 			this.$store.commit('SERCURRENTDOWNTIME', { d, h, m, s, flag: true });
-			this.originTime -=1;
+			this.originTime -= 1;
 			if (this.originTime <= 0) {
 				// this.donwTime = '--';
 				this.originTime = 0;
 				this.$store.commit('SERCURRENTDOWNTIME', { d: '0', h: '00', m: '00', s: '00', flag: false });
 				return;
 			}
-			setTimeout(this.showtime, 1000);
+			this.timer = setTimeout(this.showtime, 1000);
 		},
+	},
+	destroyed() {
+		if (this.timer) {
+			clearTimeout(this.timer);
+			this.timer = null;
+		}
 	},
 };
 </script>
