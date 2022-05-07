@@ -74,7 +74,7 @@ export default {
 			// columns: ['杭州', '宁波', '温州', '绍兴', '湖州', '嘉兴', '金华', '衢州'],
 			currentIndex: 9,
 			currentWalletBalance: 0,
-			columns: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 19, 2],
+			columns: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2],
 		};
 	},
 	watch: {
@@ -158,8 +158,8 @@ export default {
 			];
 		},
 		inviteAddress() {
-			return this.$store.state.instance.inviteAddress
-		}
+			return this.$store.state.instance.inviteAddress;
+		},
 	},
 	methods: {
 		async getWalletBalance() {
