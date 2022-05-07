@@ -10,6 +10,8 @@ export default {
 		copyRight: 'Copyright 2022 HLDAO',
 		home: '집',
 		mint: '모금 활동',
+		myNft: '내 NFT',
+		whiteBook: '백지',
 		bannerTitle: '헤라 NFT 거래 플랫폼',
 		bannerText:
 			'크로스체인 관계 DeFi 인큐베이터, ILO 및 NFT 런치패드를 통해 HLBOX 탐색, BSC, Fantom 및 Polygon에서 시작된 주요 DeFi, GameFi 및 NFT 프로젝트에 대한 조기 액세스',

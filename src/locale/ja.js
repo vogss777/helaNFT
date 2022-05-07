@@ -10,6 +10,8 @@ export default {
 		copyRight: 'Copyright 2022 HLDAO',
 		home: '家',
 		mint: '募金',
+		myNft: '私のNFT',
+		whiteBook: '白書',
 		bannerTitle: 'ヘラNFTトレーディングプラットフォーム',
 		bannerText:
 			'クロスチェーン関係のDeFiインキュベーター、HLBOXを探索するためのILOおよびNFTランチパッド、BSC、Fantom、Polygonで開始された上位のDeFi、GameFi、およびNFTプロジェクトへの早期アクセス',

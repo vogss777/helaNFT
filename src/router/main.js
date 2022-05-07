@@ -15,4 +15,12 @@ export default [
 		},
 		component: () => import('@/pages/mint/index'),
 	},
+	{
+		path: '/myNft',
+		name: 'myNft',
+		meta: {
+			title: 'myNft',
+		},
+		component: () => import('@/pages/myNft/index'),
+	},
 ];

@@ -1,11 +1,32 @@
 <template>
 	<div class="get_nft_box common_box" v-if="listImg && Object.keys(listImg).length > 0">
-		<div class="common_title">{{ i18nText.common.getNft }}</div>
+		<div class="common_title" v-if="!isMore">{{ i18nText.common.getNft }}</div>
 		<div class="nft_img_box">
-			<template v-for="(item, index) in listImg">
-				<a href="javascript:;" class="nft_img" :key="index" v-if="index <= 3">
-					<img :src="item.image" alt="" />
-				</a>
+			<template v-if="!isMore">
+				<template v-for="(item, index) in listImg">
+					<div class="flip-container nft_img" :key="index" v-if="index <= 3">
+						<div class="flipper">
+							<div class="front">
+								<img :src="item.image" alt="" />
+							</div>
+							<div class="back">
+								<img :src="item.image" alt="" />
+							</div>
+						</div>
+					</div>
+				</template>
+			</template>
+			<template v-else>
+				<div class="flip-container nft_img" v-for="(item, index) in listImg" :key="index">
+					<div class="flipper">
+						<div class="front">
+							<img :src="item.image" alt="" />
+						</div>
+						<div class="back">
+							<img :src="item.image" alt="" />
+						</div>
+					</div>
+				</div>
 			</template>
 		</div>
 	</div>
@@ -13,21 +34,15 @@
 
 <script>
 import token from '@/config/index.js';
-export default {
-	name: '',
-	data() {
-		return {};
-	},
-	computed: {},
-	methods: {},
-};
-</script>
-
-<script>
-import token from '@/config/index.js';
 import bus from '@/utils/bus.js';
 export default {
 	name: '',
+	props: {
+		isMore: {
+			type: Boolean,
+			default: false,
+		},
+	},
 	data() {
 		return {
 			listImg: {},
@@ -61,6 +76,9 @@ export default {
 				},
 				{
 					image: require('@/assets/images/product_img_03.png'),
+				},
+				{
+					image: require('@/assets/images/product_img_04.png'),
 				},
 				{
 					image: require('@/assets/images/product_img_04.png'),

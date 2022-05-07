@@ -10,6 +10,8 @@ export default {
 		copyRight: 'Copyright 2022 HLDAO',
 		home: 'Home',
 		mint: 'Fundraising',
+		myNft: 'My NFT',
+		whiteBook: 'White Paper',
 		bannerTitle: 'Hera NFT Trading Platform',
 		bannerText:
 			'Cross-chain relationship DeFi incubator, ILO and NFT launchpad to explore HLBOX, early access to top DeFi, GameFi and NFT projects launched on BSC, Fantom and Polygon',

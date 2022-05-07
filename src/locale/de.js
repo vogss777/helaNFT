@@ -10,6 +10,8 @@ export default {
 		copyRight: 'Copyright 2022 HLDAO',
 		home: 'Heim',
 		mint: 'Spendensammlung',
+		myNft: 'Mein NFT',
+		whiteBook: 'weißes Papier',
 		bannerTitle: 'Hera NFT-Handelsplattform',
 		bannerText:
 			'Kettenübergreifende Beziehung DeFi-Inkubator, ILO- und NFT-Launchpad zur Erkundung von HLBOX, frühzeitiger Zugriff auf Top-DeFi-, GameFi- und NFT-Projekte, die auf BSC, Fantom und Polygon gestartet wurden',
