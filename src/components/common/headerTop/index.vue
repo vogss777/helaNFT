@@ -11,10 +11,18 @@
 			<div class="small_connet head_item">
 				<connectWallet></connectWallet>
 			</div>
-			<a href="javascript:;" @click="changeLang" class="langs head_item">
-				<img src="@/assets/images/zh.png" v-if="langId === 'en_US'" alt="" />
-				<img src="@/assets/images/en.png" v-if="langId === 'zh_CN'" alt="" />
-			</a>
+			<div class="lang_list head_item">
+				<a href="javascript:;" class="langs" @click="langFlag = !langFlag">
+					<img :src="currentLangText" alt="" />
+				</a>
+				<transition :enter-active-class="'animated fadeIn'" :leave-active-class="'animated fadeOut'">
+					<div class="lang_item" v-if="langFlag">
+						<a href="javascript:;" v-for="(item, key) in langsList" :key="key" @click="changeLang(item.text)">
+							<img :src="item.img" alt=""
+						/></a>
+					</div>
+				</transition>
+			</div>
 		</div>
 		<collapse-transition>
 			<div class="navs_list_wrap" v-show="firstShow">
@@ -23,7 +31,9 @@
 						<router-link to="/" @click.native="firstShow = false" class="tit">{{ i18nText.common.home }}</router-link>
 					</div>
 					<div class="navs">
-						<router-link to="/fundraising" @click.native="firstShow = false" class="tit">{{ i18nText.common.mint }}</router-link>
+						<router-link to="/fundraising" @click.native="firstShow = false" class="tit">{{
+							i18nText.common.mint
+						}}</router-link>
 					</div>
 				</div>
 			</div>
@@ -47,12 +57,37 @@ export default {
 			showLimit: 0, // 显示的阈值
 			langId: localStorage.getItem('lang'),
 			firstShow: false, // 一级导航
+			langFlag: false,
 		};
 	},
 	computed: {
 		// 当前语言
 		currentLangText() {
-			return this.langId === 'en_US' ? '简体中文' : 'ENGLISH';
+			return this.langsList[this.langId].img;
+		},
+		langsList() {
+			return {
+				zh_CN: {
+					img: require('@/assets/images/zh.png'),
+					text: 'zh_CN',
+				},
+				en_US: {
+					img: require('@/assets/images/en.png'),
+					text: 'en_US',
+				},
+				ja_JP: {
+					img: require('@/assets/images/ja.png'),
+					text: 'ja_JP',
+				},
+				ko_KR: {
+					img: require('@/assets/images/ko.png'),
+					text: 'ko_KR',
+				},
+				de_DE: {
+					img: require('@/assets/images/de.png'),
+					text: 'de_DE',
+				},
+			};
 		},
 		i18nText() {
 			return {
@@ -67,8 +102,9 @@ export default {
 		switchNav() {
 			this.firstShow = !this.firstShow;
 		},
-		changeLang() {
-			this.langId = this.langId === 'en_US' ? 'zh_CN' : 'en_US';
+		changeLang(name) {
+			this.langId = name;
+			this.langFlag = false;
 			changeLanguage(this.langId);
 			// this.$store.commit('SETCHNAGELANG', this.langId);
 		},

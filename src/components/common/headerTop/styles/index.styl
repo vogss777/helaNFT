@@ -12,13 +12,37 @@
       float: right;
     }
 
-    .langs {
+    .lang_list {
+      position: relative;
       width: 0.3rem;
+      z-index: 10;
       margin-right: 0.1rem;
 
-      img {
-        width: 100%;
-        display: block;
+      .langs {
+        width: 0.3rem;
+
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .lang_item {
+        position: absolute;
+        left: 0;
+        top: 0.3rem;
+        width: 0.3rem;
+
+        a {
+          width: 0.3rem;
+          margin-top: 0.05rem;
+          display: block;
+
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
       }
     }
 
@@ -117,9 +141,8 @@
         position: relative;
 
         // &:after {
-        //   line-left();
+        // line-left();
         // }
-
         .tit {
           display: block;
           width: 100%;

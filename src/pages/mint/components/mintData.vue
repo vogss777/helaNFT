@@ -35,9 +35,9 @@
 
 			<div class="mint_item">
 				<h2>{{ i18nText.common.donationText10 }}</h2>
-				<div class="tit">
+				<!-- <div class="tit">
 					<span>{{ i18nText.common.donationText11 }}</span>
-				</div>
+				</div> -->
 				<div class="release_list nft_type_list">
 					<div class="release nft_type" :class="'title' + index" v-for="(item, index) in nftTypeList" :key="index">
 						<p class="long">{{ item.text }}</p>

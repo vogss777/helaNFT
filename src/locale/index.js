@@ -2,6 +2,9 @@ import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 import en from './en';
 import zh from './zh';
+import ja from './ja';
+import ko from './ko';
+import de from './de';
 Vue.use(VueI18n, {
 	i18n: function (path, options) {
 		let value = i18n.t(path, options);
@@ -21,6 +24,15 @@ export const i18n = new VueI18n({
 		},
 		zh_CN: {
 			...zh,
+		},
+		ja_JP: {
+			...ja,
+		},
+		ko_KR: {
+			...ko,
+		},
+		de_DE: {
+			...de,
 		},
 	},
 });
